@@ -9,9 +9,10 @@
     --ambient-glow: linear-gradient(180deg, #18181c 0%, #101013 55%, #09090b 100%);
 
     /* Brand */
-    --brand-primary: #0d9488;
-    --brand-primary-light: rgba(13, 148, 136, 0.15);
-    --brand-primary-hover: #14b8a6;
+    --brand-primary: #a1a1aa;
+    --brand-primary-light: rgba(161, 161, 170, 0.15);
+    --brand-primary-hover-bg: rgba(161, 161, 170, 0.2);
+    --brand-primary-hover: #d4d4d8;
 
     /* Surfaces */
     --bg-color: #101013;
@@ -21,7 +22,7 @@
     --card-bg: rgba(255, 255, 255, 0.04);
     --card-bg-hover: rgba(255, 255, 255, 0.07);
     --card-border: rgba(255, 255, 255, 0.08);
-    --card-border-hover: rgba(13, 148, 136, 0.4);
+    --card-border-hover: rgba(161, 161, 170, 0.4);
 
     /* Text */
     --text-color: #f1f5f9;
@@ -35,7 +36,7 @@
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
     --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.35);
-    --shadow-glow: 0 0 24px rgba(13, 148, 136, 0.15);
+    --shadow-glow: 0 0 24px rgba(161, 161, 170, 0.15);
 
     /* Typography */
     --font-heading: 'Outfit', 'DM Sans', 'Avenir Next', sans-serif;
@@ -55,9 +56,10 @@
 }
 
 [data-theme="light"] {
-    --brand-primary: #0d9488;
-    --brand-primary-light: rgba(13, 148, 136, 0.1);
-    --brand-primary-hover: #0f766e;
+    --brand-primary: #52525b;
+    --brand-primary-light: rgba(82, 82, 91, 0.1);
+    --brand-primary-hover-bg: rgba(82, 82, 91, 0.15);
+    --brand-primary-hover: #3f3f46;
 
     --bg-color: #ffffff;
     --bg-subtle: #f8f9fb;
@@ -65,7 +67,7 @@
     --card-bg: #ffffff;
     --card-bg-hover: #ffffff;
     --card-border: rgba(0, 0, 0, 0.08);
-    --card-border-hover: rgba(13, 148, 136, 0.4);
+    --card-border-hover: rgba(82, 82, 91, 0.4);
 
     --text-color: #0f172a;
     --text-secondary: #475569;
@@ -76,7 +78,7 @@
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
     --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.1);
-    --shadow-glow: 0 0 24px rgba(13, 148, 136, 0.1);
+    --shadow-glow: 0 0 24px rgba(82, 82, 91, 0.1);
     --ambient-glow: var(--bg-color);
 }
 
@@ -247,7 +249,7 @@ body {
 }
 
 [data-theme="light"] .tab-button.active {
-    background: rgba(13, 148, 136, 0.1);
+    background: var(--brand-primary-light);
     color: var(--brand-primary);
 }
 
@@ -308,7 +310,7 @@ body {
 }
 
 .link-item:hover .link-icon {
-    background: rgba(13, 148, 136, 0.2);
+    background: var(--brand-primary-hover-bg);
     transform: scale(1.05);
 }
 
@@ -470,7 +472,8 @@ body {
 }
 
 .link-item[data-category="film"] .link-released {
-    color: var(--brand-primary-hover);
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
 }
 
 .link-item[data-category="film"] .link-icon {
